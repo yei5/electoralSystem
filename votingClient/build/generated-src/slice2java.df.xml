@@ -1,0 +1,15 @@
+<state>
+  <timestamp value='1748659671075' />
+  <sourceSet name='default'>
+    <source name='/home/joshua/Escritorio/electoralSystem/ElectoralSystem.ice'>
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/QueryServer.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/VotingServer.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/QueryServerPrx.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/_QueryServerPrxI.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/VotingServerPrx.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/votingClient/build/generated-src/electoralSystem/_VotingServerPrxI.java' />
+    </source>
+    <arg value='/usr/bin/slice2java' />
+    <arg value='-I/usr/share/ice/slice' />
+  </sourceSet>
+</state>
