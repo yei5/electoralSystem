@@ -12,13 +12,13 @@ public class QueryServerImpl implements QueryServer {
     @Override
     public String queryVotingTable(String votantId, Current current) {
         try (Connection conn = DBConnection.getConnection()) {
-            String sql = "SELECT lugar_votacion FROM votantes WHERE cedula = ?";
+            String sql = "SELECT mesa_id FROM ciudadanos WHERE documento = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, votantId);
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                return "Lugar de votación: " + rs.getString("lugar_votacion");
+                return "Mesa de votación: " + rs.getString("mesa_id");
             } else {
                 return "⚠️ No se encontró ningún votante con esa cédula.";
             }

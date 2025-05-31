@@ -5,6 +5,8 @@ electoralSystem/VotingServer.java
  electoralSystem.VotingServer$1
 electoralSystem/_VotingServerPrxI.java
  electoralSystem._VotingServerPrxI
+utils/DBConnection.java
+ utils.DBConnection
 utils/MockDatabase.java
  utils.MockDatabase
 CentralServer.java

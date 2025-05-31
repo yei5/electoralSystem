@@ -17,7 +17,7 @@ public class VotingServerImpl implements VotingServer {
             conn.setAutoCommit(false); // Para rollback en caso de error
 
             // Verificar si ya votó
-            String check = "SELECT ha_votado FROM votantes WHERE cedula = ?";
+            String check = "SELECT ha_votado FROM ciudadanos WHERE documento = ?";
             PreparedStatement stmtCheck = conn.prepareStatement(check);
             stmtCheck.setString(1, votantId);
             ResultSet rs = stmtCheck.executeQuery();
@@ -40,7 +40,7 @@ public class VotingServerImpl implements VotingServer {
             stmtInsert.executeUpdate();
 
             // Marcar como votado
-            String update = "UPDATE votantes SET ha_votado = TRUE WHERE cedula = ?";
+            String update = "UPDATE ciudadanos SET ha_votado = TRUE WHERE cedula = ?";
             PreparedStatement stmtUpdate = conn.prepareStatement(update);
             stmtUpdate.setString(1, votantId);
             stmtUpdate.executeUpdate();
