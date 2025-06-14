@@ -82,5 +82,14 @@
                 type="::electoralSystem::CentralServer"
                 adapter="CentralServerAdapter"/>
 
+        <object name="QueryStation"
+                identity="QueryStation"
+                type="::electoralSystem::QueryStation"
+                adapter="QueryStationAdapter"/>
+        <object name="QueryClient"
+                identity="QueryClient"
+                type="::electoralSystem::QueryClient"
+                adapter="QueryClientAdapter"/>        
+
     </application>
 </icegrid>

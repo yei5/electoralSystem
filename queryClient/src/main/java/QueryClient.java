@@ -11,7 +11,7 @@ public class QueryClient {
             
             // Crear un proxy para el servicio QueryStation
             ObjectPrx base = communicator.stringToProxy("QueryStation");
-            QueryStationPrx queryStation = QueryStationPrx.uncheckedCast(base);
+            QueryStationPrx queryStation = QueryStationPrx.checkedCast(base);
             
             // Realizar una consulta
             String document = "123456789"; // Documento a consultar
