@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class VoteProcessor {
     public static void main(String[] args) {
-        try (Communicator communicator = Util.initialize(args, "voteProcessor.cfg")) {
+        try (Communicator communicator = Util.initialize(args)) {
     // 3. Conectar a la base de datos
     Connection dbConnection = DBConnection.getConnection();
 
@@ -21,11 +21,7 @@ public class VoteProcessor {
     adapter.add(voteProcessor, Util.stringToIdentity("VoteProcessor"));
 
     adapter.activate();
-
-
-
-    System.out.println("Vote Processor suscrito al tópico y expuesto como servicio RPC.");
-    communicator.waitForShutdown();
+    System.out.println("Vote Processor is running...");
 
         } catch (java.lang.Exception e) {
             e.printStackTrace();

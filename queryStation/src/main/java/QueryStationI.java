@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import com.zeroc.Ice.*;
 import electoralSystem.QueryStation;
 import utils.DBConnection;
-import redis.clients.jedis.Jedis;
 
 
 public class QueryStationI implements QueryStation {

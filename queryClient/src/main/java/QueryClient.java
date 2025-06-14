@@ -10,7 +10,7 @@ public class QueryClient {
             Communicator communicator = Util.initialize(args);
             
             // Crear un proxy para el servicio QueryStation
-            ObjectPrx base = communicator.stringToProxy("QueryStation:default -h localhost -p 10000");
+            ObjectPrx base = communicator.stringToProxy("QueryStation");
             QueryStationPrx queryStation = QueryStationPrx.uncheckedCast(base);
             
             // Realizar una consulta

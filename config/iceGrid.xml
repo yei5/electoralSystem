@@ -1,0 +1,86 @@
+<icegrid>
+    <application name="ElectoralSystem">
+
+        <!-- Adaptadores para los servicios -->
+        <node name="ElectoralNode">
+
+            <!-- Servidor de votación -->
+            <server id="VoteStationServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar voteStation/build/libs/voteStation-all.jar"
+                    workingDir=".">
+                <adapter name="VoteStationAdapter"
+                         endpoints="tcp" />
+            </server>
+
+            <!-- Procesador de votos -->
+            <server id="VoteProcessorServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar voteProcessor/build/libs/voteProcessor-all.jar"
+                    workingDir=".">
+                <adapter name="VoteProcessorAdapter"
+                         endpoints="tcp" />
+            </server>
+
+            <!-- Cliente de votación -->
+            <server id="VoteClientServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar voteClient/build/libs/voteClient-all.jar"
+                    workingDir=".">
+                <adapter name="VoteClientAdapter"
+                         endpoints="tcp" />
+            </server>
+
+            <!-- Consulta de estaciones -->
+            <server id="QueryStationServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar queryStation/build/libs/queryStation-all.jar"
+                    workingDir=".">
+                <adapter name="QueryStationAdapter"
+                         endpoints="tcp" />
+            </server>
+
+            <!-- Cliente de consulta -->
+            <server id="QueryClientServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar queryClient/build/libs/queryClient-all.jar"
+                    workingDir=".">
+                <adapter name="QueryClientAdapter"
+                         endpoints="tcp" />
+            </server>
+
+            <!-- Servidor central -->
+            <server id="CentralServer"
+                    exe="java"
+                    activation="on-demand"
+                    options="-jar centralServer/build/libs/centralServer-all.jar"
+                    workingDir=".">
+                <adapter name="CentralServerAdapter"
+                         endpoints="tcp" />
+            </server>
+
+        </node>
+
+        <!-- Servicios bien conocidos (opcionales) -->
+        <object name="VoteStation"
+                identity="VoteStation"
+                type="::electoralSystem::VoteStation"
+                adapter="VoteStationAdapter"/>
+
+        <object name="VoteProcessor"
+                identity="VoteProcessor"
+                type="::electoralSystem::VoteProcessor"
+                adapter="VoteProcessorAdapter"/>
+
+        <object name="CentralServer"
+                identity="CentralServer"
+                type="::electoralSystem::CentralServer"
+                adapter="CentralServerAdapter"/>
+
+    </application>
+</icegrid>

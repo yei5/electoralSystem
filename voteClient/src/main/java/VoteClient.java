@@ -10,7 +10,7 @@ public class VoteClient {
             Communicator communicator = Util.initialize(args);
             
             // Crear un proxy para el servicio VoteStation
-            ObjectPrx base = communicator.stringToProxy("VoteStation:default -h localhost -p 9999");
+            ObjectPrx base = communicator.stringToProxy("VoteStation");
             VoteStationPrx voteStation = VoteStationPrx.uncheckedCast(base);
 
             // Realizar una consulta

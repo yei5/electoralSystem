@@ -9,9 +9,9 @@ public class VoteStation {
     public static void main(String[] args) {
         try {
             // Inicializar el comunicador de Ice
-            com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args, "voteStation.cfg");
+            com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args);
 
-            ObjectPrx base = communicator.stringToProxy("VoteProcessor:default -h localhost -p 10002");
+            ObjectPrx base = communicator.stringToProxy("VoteProcessor");
             VoteProcessorPrx voteProcessor = VoteProcessorPrx.uncheckedCast(base);
             
             // Crear el objeto VoteStation

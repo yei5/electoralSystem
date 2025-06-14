@@ -1,4 +1,3 @@
-import redis.clients.jedis.Jedis;
 import utils.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,11 +6,11 @@ import java.sql.ResultSet;
 public class QueryStation {
 
     public static void main(String[] args) {
-        Jedis cache = null;
+        
         Connection dbConnection = null;
         try {
             // Configuración de Ice
-            com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args, "queryStation.cfg");
+            com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args);
             
 
             // Crear conexión a la base de datos (PostgreSQL)
@@ -32,8 +31,6 @@ public class QueryStation {
         } catch (java.lang.Exception e) {
             e.printStackTrace();
         } finally {
-            // Cerrar conexiones
-            cache.close();
             DBConnection.closeConnection(dbConnection);
         }
     }
