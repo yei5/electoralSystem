@@ -1,4 +1,9 @@
 rootProject.name = 'electoralSystem'
-include 'centralServer'
-include 'queryClient'
-include 'votingClient'
+include(
+    'queryStation',
+    'voteStation',
+    'voteProcessor',
+    'centralServer',
+    'queryClient',
+    'voteClient',
+)

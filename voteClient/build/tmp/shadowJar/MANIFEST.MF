@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: VoteClient
+Class-Path: icegrid-3.7.10.jar icestorm-3.7.10.jar glacier2-3.7.10.jar i
+ ce-3.7.10.jar jedis-5.1.0.jar slf4j-simple-1.7.32.jar slf4j-api-1.7.36.
+ jar postgresql-42.5.0.jar commons-pool2-2.12.0.jar json-20231013.jar gs
+ on-2.10.1.jar checker-qual-3.5.0.jar
+

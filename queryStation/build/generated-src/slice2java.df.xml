@@ -1,0 +1,19 @@
+<state>
+  <timestamp value='1749928451267' />
+  <sourceSet name='default'>
+    <source name='/home/joshua/Escritorio/electoralSystem/ElectoralSystem.ice'>
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/VoteEvent.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/QueryStation.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/VoteStation.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/VoteProcessor.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/QueryStationPrx.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/_QueryStationPrxI.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/VoteStationPrx.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/_VoteStationPrxI.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/VoteProcessorPrx.java' />
+      <file name='/home/joshua/Escritorio/electoralSystem/queryStation/build/generated-src/electoralSystem/_VoteProcessorPrxI.java' />
+    </source>
+    <arg value='/usr/bin/slice2java' />
+    <arg value='-I/usr/share/ice/slice' />
+  </sourceSet>
+</state>

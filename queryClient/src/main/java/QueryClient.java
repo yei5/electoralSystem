@@ -1,38 +1,30 @@
 import com.zeroc.Ice.*;
-import electoralSystem.QueryServerPrx;
 
-import java.util.Scanner;
+import electoralSystem.QueryStationPrx;
 
 public class QueryClient {
+
     public static void main(String[] args) {
-        Communicator communicator = null;
-
         try {
-            communicator = Util.initialize(args);
-
-            ObjectPrx base = communicator.stringToProxy("Query:default -p 10000");
-            QueryServerPrx proxy = QueryServerPrx.checkedCast(base);
-
-            if (proxy == null) {
-                throw new Error("❌ No se pudo conectar con el servidor de consulta.");
-            }
-
-            try (Scanner scanner = new Scanner(System.in)) {
-                System.out.print("🔍 Ingrese su cédula para consultar su mesa de votación: ");
-                String cedula = scanner.nextLine();
-
-                String resultado = proxy.queryVotingTable(cedula);
-                System.out.println("🗳️ Resultado: " + resultado);
-            }
-
+            // Inicializar el comunicador de Ice
+            Communicator communicator = Util.initialize(args);
+            
+            // Crear un proxy para el servicio QueryStation
+            ObjectPrx base = communicator.stringToProxy("QueryStation:default -h localhost -p 10000");
+            QueryStationPrx queryStation = QueryStationPrx.uncheckedCast(base);
+            
+            // Realizar una consulta
+            String document = "123456789"; // Documento a consultar
+            String result = queryStation.query(document);
+            
+            // Mostrar el resultado
+            System.out.println("Resultado de la consulta para el documento " + document + ": " + result);
+            
+            // Finalizar el comunicador
+            communicator.destroy();
         } catch (java.lang.Exception e) {
-            System.err.println("❌ Error: " + e.getMessage());
-        } finally {
-            if (communicator != null) {
-                communicator.destroy();
-            }
+            e.printStackTrace();
         }
+
     }
 }
-
-

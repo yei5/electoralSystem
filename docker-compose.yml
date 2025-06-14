@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_DB: 'votaciones'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'password'
+    ports:
+      - '5435:5432'
+    expose:
+      - '5435'
+    volumes:
+      - my-v:/var/lib/postgresql/data
+
+volumes:
+  my-v:

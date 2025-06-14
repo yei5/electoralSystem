@@ -1,16 +1,25 @@
-electoralSystem/VotingServer.java
- electoralSystem.VotingServer
- electoralSystem.VotingServer$1
-electoralSystem/_VotingServerPrxI.java
- electoralSystem._VotingServerPrxI
+electoralSystem/_VoteStationPrxI.java
+ electoralSystem._VoteStationPrxI
+electoralSystem/_QueryStationPrxI.java
+ electoralSystem._QueryStationPrxI
+electoralSystem/VoteStation.java
+ electoralSystem.VoteStation
+ electoralSystem.VoteStation$1
+electoralSystem/VoteProcessorPrx.java
+ electoralSystem.VoteProcessorPrx
+electoralSystem/QueryStationPrx.java
+ electoralSystem.QueryStationPrx
+electoralSystem/VoteProcessor.java
+ electoralSystem.VoteProcessor
+ electoralSystem.VoteProcessor$1
+electoralSystem/_VoteProcessorPrxI.java
+ electoralSystem._VoteProcessorPrxI
 QueryClient.java
  QueryClient
-electoralSystem/QueryServer.java
- electoralSystem.QueryServer
- electoralSystem.QueryServer$1
-electoralSystem/VotingServerPrx.java
- electoralSystem.VotingServerPrx
-electoralSystem/_QueryServerPrxI.java
- electoralSystem._QueryServerPrxI
-electoralSystem/QueryServerPrx.java
- electoralSystem.QueryServerPrx
+electoralSystem/QueryStation.java
+ electoralSystem.QueryStation
+ electoralSystem.QueryStation$1
+electoralSystem/VoteStationPrx.java
+ electoralSystem.VoteStationPrx
+electoralSystem/VoteEvent.java
+ electoralSystem.VoteEvent

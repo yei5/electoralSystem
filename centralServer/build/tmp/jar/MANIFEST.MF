@@ -1,10 +1,7 @@
 Manifest-Version: 1.0
 Main-Class: CentralServer
-Class-Path: file:/home/joshua/.gradle/caches/modules-2/files-2.1/com.zer
- oc/ice/3.7.6/6c7f86b7f9e5f0804a7307077e6c058d8a93fa70/ice-3.7.6.jar fil
- e:/home/joshua/.gradle/caches/modules-2/files-2.1/org.postgresql/postgr
- esql/42.3.1/9ca7df660e875b91c78e3d1608d4d7469ad3470c/postgresql-42.3.1.
- jar file:/home/joshua/.gradle/caches/modules-2/files-2.1/org.checkerfra
- mework/checker-qual/3.5.0/2f50520c8abea66fbd8d26e481d3aef5c673b510/chec
- ker-qual-3.5.0.jar
+Class-Path: icegrid-3.7.10.jar icestorm-3.7.10.jar glacier2-3.7.10.jar i
+ ce-3.7.10.jar jedis-5.1.0.jar slf4j-simple-1.7.32.jar slf4j-api-1.7.36.
+ jar postgresql-42.5.0.jar commons-pool2-2.12.0.jar json-20231013.jar gs
+ on-2.10.1.jar checker-qual-3.5.0.jar
 
