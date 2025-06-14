@@ -12,17 +12,13 @@ public class QueryStation {
         try {
             // Configuración de Ice
             com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args, "queryStation.cfg");
-            String cacheHost = "localhost"; // Cambiar según tu configuración
-            int cachePort = 6379; // Puerto por defecto de Redis
-
-            // Crear conexión a la caché (Redis)
-            cache = new Jedis(cacheHost, cachePort);
+            
 
             // Crear conexión a la base de datos (PostgreSQL)
             dbConnection = DBConnection.getConnection();
 
             // Crear el objeto QueryStation
-            QueryStationI queryStation = new QueryStationI(cache, dbConnection);
+            QueryStationI queryStation = new QueryStationI(dbConnection);
 
             // Registrar el objeto en Ice
             com.zeroc.Ice.ObjectAdapter adapter = communicator.createObjectAdapter("QueryStationAdapter");
